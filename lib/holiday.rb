@@ -69,8 +69,11 @@ def all_supplies_in_holidays(holiday_hash)
   #   New Years: Party Hats
   # Summer:
   #   Fourth Of July: Fireworks, BBQ
-  # etc.
-
+  # etc
+  
+  holiday_hash.collect do |holiday_name, supplies|
+    supplies
+  end.flatten
 end
 
 def all_holidays_with_bbq(holiday_hash)
